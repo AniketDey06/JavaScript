@@ -1,3 +1,4 @@
+//Immediately Invoked Function Expression
 // named iife
 (function one() {
     console.log(`DB connect`);
