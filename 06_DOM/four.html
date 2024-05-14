@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>js</li>
+    </ul>
+</body>
+<script>
+    function addlang(langname){
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addlang("py");
+    addlang("c");
+    addlang("c++");
+    addlang("ts");
+
+    function addoplang(langname){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector('.language').appendChild(li);
+    }
+    addoplang("go")
+
+    const slang = document.querySelector("li:nth-child(2)")
+    slang.innerHTML = "Mojo";
+    document.createElement('li');
+
+    const lastlang = document.querySelector('li:last-child')
+</script>
+</html>
