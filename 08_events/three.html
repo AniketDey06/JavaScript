@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(40, 40, 40);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aniket</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayData = function(){
+        console.log("hi", Date.now());
+    }
+    let interValID;
+    document.querySelector("#start").addEventListener('click',function(){
+        interValID = setInterval(function(){
+            console.log("hi", Date.now());
+        },1000)
+    })
+
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearInterval(interValID);
+        console.log("cleared");
+    })
+
+</script>
+</html>
